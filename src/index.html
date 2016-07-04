@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script src="../node_modules/vue-resource/dist/vue-resource.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Browser</h1>
+        <ul>
+            <li>userAgent: {{ navigator.userAgent }}</li>
+            <li>language: {{ navigator.language }}</li>
+            <li>vendor: {{ navigator.vendor }}</li>
+            <li>Plugins
+                <ul>
+                    <li v-for="plugin in navigator.plugins">{{ plugin.name }}</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Hardware</h2>
+        <ul>
+            <li>Hardware concurrency: {{ navigator.hardwareConcurrency }}</li>
+            <li>IP: {{ ip }}</li>
+            <li>Provider: {{ isp }}</li>
+        </ul>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
